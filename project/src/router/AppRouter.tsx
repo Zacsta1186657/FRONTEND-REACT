@@ -4,7 +4,7 @@ import Dashboard from "../pages/Dashboard";
 import Users from "../pages/Users";
 import Admin from "../pages/Admin";
 import ProtectedRoute from "../components/ProtectedRoute";
-import Sidebar from "../components/Sidebar";
+import Sidebars from "../components/Sidebars";
 import Register from "../pages/Register";
 
 export default function AppRouter() {
@@ -18,7 +18,7 @@ export default function AppRouter() {
                 <Route path="/*" element={
                     <ProtectedRoute>
                         <div style={{ display: "flex" }}>
-                            <Sidebar />
+                            <Sidebars />
                             <div style={{ padding: 20 }}>
                                 <Routes>
                                     <Route path="dashboard" element={<Dashboard />} />

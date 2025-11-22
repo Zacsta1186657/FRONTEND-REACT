@@ -10,7 +10,7 @@ export interface User {
 
 export interface AuthState {
     user: User | null;
-    menu: any[];               // Si tienes un modelo de menú lo tipamos luego
+    menu: [];    // Si tienes un modelo de menú lo tipamos luego
     isAuthenticated: boolean | null; // null = loading
     login: (username: string, password: string) => Promise<void>;
     loadMenu: () => Promise<void>;
