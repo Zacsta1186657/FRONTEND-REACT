@@ -8,9 +8,17 @@ export interface User {
     // Puedes agregar más campos según tu backend
 }
 
+export interface Menu {
+    title: string;
+    url?: string | null;
+    icon: string;
+    requiredPermissions: string[];
+    children?: Menu[] | null;
+}
+
 export interface AuthState {
     user: User | null;
-    menu: [];    // Si tienes un modelo de menú lo tipamos luego
+    menu: Menu[];    // Si tienes un modelo de menú lo tipamos luego
     isAuthenticated: boolean | null; // null = loading
     login: (username: string, password: string) => Promise<void>;
     loadMenu: () => Promise<void>;
@@ -29,6 +37,7 @@ export const useAuthStore = create<AuthState>(set => ({
     },
     loadMenu: async () => {
         const res = await api.get("/menu");
+        console.log(res.data)
         set({ menu: res.data });
     },
     // 👇 Esto verifica si hay cookie válida

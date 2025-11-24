@@ -4,7 +4,7 @@ import Dashboard from "../pages/Dashboard";
 import Users from "../pages/Users";
 import Admin from "../pages/Admin";
 import ProtectedRoute from "../components/ProtectedRoute";
-import Sidebars from "../components/Sidebars";
+import Sidebars from "../components/menu/Sidebars";
 import Register from "../pages/Register";
 
 export default function AppRouter() {

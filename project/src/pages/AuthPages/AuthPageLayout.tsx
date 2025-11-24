@@ -1,8 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
 import ThemeTogglerTwo from "@/components/common/ThemeTogglerTwo";
-import GridShape from "@/components/common/GridShape";
-import { BoxesIcon } from "lucide-react";
 
 export default function AuthLayout({
     children,
@@ -14,7 +11,7 @@ export default function AuthLayout({
             <div className="relative flex flex-col justify-center w-full h-screen lg:flex-row dark:bg-gray-900 sm:p-0">
                 {children}
                 <div className="relative hidden w-full lg:w-1/2 overflow-hidden dark:bg-white/5 lg:grid">
-                    
+
                     {/* Imagen de fondo */}
                     <div
                         className="absolute inset-0 bg-cover bg-center"
